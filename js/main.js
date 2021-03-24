@@ -1,6 +1,5 @@
 
 function criaLinha(questionario) {
-    console.log(questionario)
     linha = document.createElement("tr");
     tdTitulo = document.createElement("td");
     tdUsuario = document.createElement('td');
