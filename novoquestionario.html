@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de questionários</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/post.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+   
+</head>
+<body>
+    <div class="container">
+        <div class="containerNQ">
+            <h1>Novo questionário:</h1>
+            <div class="newQuestion">
+                <form class="formNQ" onsubmit="cadastrarQuestionario()">
+                    <label for="titulo">Titulo:</label>
+                    <input type="text" id="titulo" name="titulo">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" name="usuario">
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+                <form class="formNQ" onsubmit="cadastrarPergunta()">
+                    <label for="titulo">Titulo:</label>
+                    <input type="text" id="titulo" name="titulo">
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
