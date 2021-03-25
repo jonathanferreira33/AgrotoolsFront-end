@@ -1,3 +1,7 @@
+
+let key = 'item 1';
+localStorage.setItem(key, 'value');
+
 var idQuestionario = 0;
 function gerarQuestionario(){
     const showdata = (result)=> {
@@ -10,10 +14,10 @@ function gerarQuestionario(){
         document.getElementById('usuario').innerHTML = usuarioQuestionario; 
         document.getElementById('id').innerHTML = idQuestionario;
         
-        document.querySelector('.newQuestion').innerHTML = `
+        document.querySelector('.novaQuestao').innerHTML = `
             <form class="formNQ" onsubmit="cadastrarQuestao(${idQuestionario})">
             <input type="text" id="questao" name="questao">
-            <button type="submit" class="btn">Enviar</button>
+            <button type="submit" onclick="abrirModal()" class="btn open-modal">Enviar</button>
             </form>
         `
     }
@@ -37,7 +41,6 @@ function cadastrarQuestao() {
     event.preventDefault();
     const url = 'http://localhost:8080/questionarios/pergunta'
     let id = idQuestionario;
-    console.log('linha 40:' + id)
     let questao = document.getElementById("questao").value;
     let resposta = ''
 
@@ -58,6 +61,21 @@ function cadastrarQuestao() {
 function novaQuestao() {
     $( ".form:first" ).clone().appendTo(".form");
   }
+
+function abrirModal(){
+    document.getElementById('modal').style.top = "0";
+
+}
+
+function fecharModal(){
+    document.getElementById('modal').style.top = "-100%";
+    
+}
+
+function limparQuestao(){
+    fecharModal();
+    document.getElementById("questao").value = "";
+}
 
   
 document.onload = gerarQuestionario();

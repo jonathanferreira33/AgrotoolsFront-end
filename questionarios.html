@@ -13,10 +13,25 @@
         <div class="title">
             <h1>Lista de questionários:</h1>
         </div>
-        <table id="tabela">
+        <table id="tabela" class="content-table">
             
         </table>
             
+        </div>
+    </div>
+    <div class="bg-modal" id="modal">
+        <div class="modal tamanhoM2">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <section class="containerM column">
+                <h2 id="tituloQuest"></h2>
+                <label>
+                    Latitude: <span id='lat'></span>
+                    Longitude: <span id='lon'></span>
+                </label>
+                <table id="tabelaRespostas" class="">
+            
+                </table>
+            </section>
         </div>
     </div>
 
@@ -24,5 +39,6 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="./js/main.js"></script>
+
 </html>
 

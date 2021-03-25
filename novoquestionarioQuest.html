@@ -6,26 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de questionários</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/postQuest.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-   
 </head>
 <body>
-    <div class="container">
-        <div>
+    <div class="containerQs">
+        <div class="dadosQuestionario">
             <div id="id" style="display:none"></div>
-            <p>Titulo:</p>
-            <div id="titulo"></div>
-            <p>Usuário:</p>
-            <div id="usuario"></div>
+            <div>
+                <small>Titulo:</small>
+                <div id="titulo"></div>
+            </div>
+            <div>
+                <small>Usuário:</small>
+                <div id="usuario"></div>
+            </div>
         </div>
         <div class="containerNQ">
             <h2>Cadastrar questão:</h2>
-            <div class="newQuestion">
+            <div class="novaQuestao">
                 
             </div>
         </div>
     </div>
+    <div class="bg-modal" id="modal">
+        <div class="modal tamanhoM1">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <section class="containerM column">
+                <a class="item" onclick="limparQuestao()">Nova questão</a>
+                <a class="item" href="./questionarios.html">Finalizar</a>
+            </section>
+        </div>
+    </div>
+    <script src="./js/postQuest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </body>
 </html>
